@@ -27,6 +27,7 @@ public class QueryResponse {
             c = new c("localhost", 5001, "");
 //            Object result = c.k("2+3");
 //            LOGGER.log(Level.INFO, "result is {0}", result);
+            // testFunc:{[a;b] res:a+a+b+b; (neg .z.w)(`result!(res)) }
             c.ks("testFunc", 3, 5);
             Object k = c.k("");
             System.out.println("result is " + k);

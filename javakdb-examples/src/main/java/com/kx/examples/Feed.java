@@ -61,12 +61,15 @@ public class Feed {
         }
         // Note that we don't need to supply a flip with columns names for .u.upd.
         // Just the column data in the correct order is sufficient.
-        LOGGER.log(Level.INFO, "Populating 'mytable' with a 10 row bulk insert (without column names)...");
-        kconn.ks(QFUNC, TABLENAME, new Object[]{time, sym, price, size});
+//        LOGGER.log(Level.INFO, "Populating 'mytable' with a 10 row bulk insert (without column names)...");
+//        kconn.ks(QFUNC, TABLENAME, new Object[]{time, sym, price, size});
         // if we did want to supply a flip, it can be done as
 //        LOGGER.log(Level.INFO, "Populating 'mytable' with a 10 row bulk insert (using Flip with column names)...");
-//        kconn.ks(QFUNC, TABLENAME, new c.Flip(new c.Dict(new String[]{"time", "sym", "price", "size"}, new Object[]{time, sym, price, size})));
-        kconn.k(""); // sync chase ensures the remote has processed all msgs
+        kconn.ks(QFUNC, TABLENAME, new c.Flip(new c.Dict(new String[]{"time", "sym", "price", "size"}, new Object[]{time, sym, price, size})));
+        Object k = kconn.k("");// sync chase ensures the remote has processed all msgs
+        // .u.upd:{[tbl;row] res: insert[tbl](row); (neg .z.w)(`result!(res))}
+        // 这里会返回插入成功的行号
+        System.out.println("result is " + k);
     }
 
     /**
