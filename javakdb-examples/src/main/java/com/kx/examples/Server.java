@@ -42,7 +42,7 @@ public class Server {
      * @param args not used
      */
     public static void main(String[] args) {
-        int port = 5001;
+        int port = 5010;
         try (ServerC c = new ServerC(new ServerSocket(port))) {
             boolean ok = true;
             while (ok) {

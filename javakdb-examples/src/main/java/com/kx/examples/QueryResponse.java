@@ -25,7 +25,7 @@ public class QueryResponse {
         c c = null;
         try {
             c = new c("localhost", 5001, "");
-            Object result = c.k("select from p");
+            Object result = c.k("2+3");
             LOGGER.log(Level.INFO, "result is {0}", result);
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.toString());
