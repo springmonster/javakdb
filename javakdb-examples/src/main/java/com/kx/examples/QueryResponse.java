@@ -25,8 +25,11 @@ public class QueryResponse {
         c c = null;
         try {
             c = new c("localhost", 5001, "");
-            Object result = c.k("2+3");
-            LOGGER.log(Level.INFO, "result is {0}", result);
+//            Object result = c.k("2+3");
+//            LOGGER.log(Level.INFO, "result is {0}", result);
+            c.ks("testFunc", 3, 5);
+            Object k = c.k("");
+            System.out.println("result is " + k);
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.toString());
         } finally {
