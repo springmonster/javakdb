@@ -2,10 +2,10 @@ language: java
 os: linux
 dist: xenial
 jdk:
-    - oraclejdk11
+  - oraclejdk11
 addons:
-    sonarcloud:
-        organization: "kxsystems"
-        token: "$SONAR_KEY"
+  sonarcloud:
+    organization: "kxsystems"
+    token: "$SONAR_KEY"
 script:
-    - mvn clean verify sonar:sonar -Dsonar.projectKey=KxSystems_javakdb
+  - mvn clean verify sonar:sonar -Dsonar.projectKey=KxSystems_javakdb

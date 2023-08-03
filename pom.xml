@@ -3,52 +3,52 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <!-- parent pom -->
-  <groupId>com.kx.multi</groupId>
-  <artifactId>JavaKdbModules</artifactId>
-  <packaging>pom</packaging>
-  <version>2.0-BETA-2</version>
+    <!-- parent pom -->
+    <groupId>com.kx.multi</groupId>
+    <artifactId>JavaKdbModules</artifactId>
+    <packaging>pom</packaging>
+    <version>2.0-BETA-2</version>
 
-  <licenses>
-    <license>
-      <name>Apache License, Version 2.0</name>
-      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-  <developers>
-    <developer>
-      <name>Fusion Developer</name>
-      <email>fusion@kx.com</email>
-      <organization>KX Systems</organization>
-      <organizationUrl>http://www.kx.com</organizationUrl>
-    </developer>
-  </developers>
+    <developers>
+        <developer>
+            <name>Fusion Developer</name>
+            <email>fusion@kx.com</email>
+            <organization>KX Systems</organization>
+            <organizationUrl>http://www.kx.com</organizationUrl>
+        </developer>
+    </developers>
 
-  <scm>
-    <connection>scm:git:git://github.com/KxSystems/javakdb.git</connection>
-    <developerConnection>scm:git:ssh://github.com:KxSystems/javakdb.git</developerConnection>
-    <url>https://github.com/KxSystems/javakdb/tree/master</url>
-  </scm>
+    <scm>
+        <connection>scm:git:git://github.com/KxSystems/javakdb.git</connection>
+        <developerConnection>scm:git:ssh://github.com:KxSystems/javakdb.git</developerConnection>
+        <url>https://github.com/KxSystems/javakdb/tree/master</url>
+    </scm>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.version>1.8</java.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
-    <jacoco.version>0.8.8</jacoco.version>
-    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.language>java</sonar.language>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <jacoco.version>0.8.8</jacoco.version>
+        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+        <sonar.language>java</sonar.language>
+    </properties>
 
-  <!-- sub modules -->
-  <modules>
-    <module>javakdb</module>
-    <module>javakdb-examples</module>
-  </modules>
+    <!-- sub modules -->
+    <modules>
+        <module>javakdb</module>
+        <module>javakdb-examples</module>
+    </modules>
 
 </project>
